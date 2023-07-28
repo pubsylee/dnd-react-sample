@@ -1,2 +1,1 @@
-# dnd-react-sample
-dnd mobile sample project (react version)
+#### 가이드 업데이트 예정
