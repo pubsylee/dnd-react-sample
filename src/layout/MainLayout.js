@@ -11,6 +11,20 @@ const MainLayout = () => {
   const secondSlashIndex = pathname.indexOf('/', 1);
   const extractedPath = firstSlashIndex !== -1 && secondSlashIndex !== -1 ? pathname.substring(firstSlashIndex + 1, secondSlashIndex) : pathname.substring(firstSlashIndex + 1);
   const [title,setTitle] = useState('');
+  // const [scrollTop, setScrollTop] = useState(0);
+
+  // useEffect(() => {
+  //   function handleScroll() {
+  //     setScrollTop(window.pageYOffset);
+  //     console.log('scrollTop : ',scrollTop)
+  //   }
+
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
   useEffect(()=>{
     switch (extractedPath) {
       case 'project':
@@ -37,9 +51,9 @@ const MainLayout = () => {
           <title>{title}</title>
         </Helmet>
       </HelmetProvider>
-      <Header />
+      <Header/>
       <Outlet />
-      <Footer />
+      <Footer/>
     </>
   );
 };
