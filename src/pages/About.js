@@ -39,15 +39,15 @@ const About = () => {
 					<div className="service-list-wrap">
 						<div className="bg-area hide-mobile">
 							<p className="circle01" data-aos="fade-left" data-aos-duration="1000"><img
-									src="/images/bg_service_circle01.png" alt=""/></p>
+									src="/assets/images/bg_service_circle01.png" alt=""/></p>
 							<p className="circle02" data-aos="fade-right" data-aos-duration="1000"><img
-									src="/images/bg_service_circle02.png" alt=""/></p>
+									src="/assets/images/bg_service_circle02.png" alt=""/></p>
 						</div>
 						<div className="bg-area hide-pc">
 							<p className="circle01" data-aos="fade-left" data-aos-duration="1000"><img
-									src="/images/bg_service_circle01_mo.png" alt=""/></p>
+									src="/assets/images/bg_service_circle01_mo.png" alt=""/></p>
 							<p className="circle02" data-aos="fade-right" data-aos-duration="1000"><img
-									src="/images/bg_service_circle02_mo.png" alt=""/></p>
+									src="/assets/images/bg_service_circle02_mo.png" alt=""/></p>
 						</div>
 						<div className="service-list" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
 							<p className="tit01">UX.UI.DX</p>
@@ -96,27 +96,27 @@ const About = () => {
 					<div className="work-list-wrap">
 						<ul>
 							<li data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/images/icon_work05.gif" alt=""/></p>
+								<p className="img"><img src="/assets/images/icon_work05.gif" alt=""/></p>
 								<p className="tit">Define</p>
 								<p className="desc">귀기울이는 요구사항 분석</p>
 							</li>
 							<li data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-								<p className="img"><img src="/images/icon_work02.gif" alt=""/></p>
+								<p className="img"><img src="/assets/images/icon_work02.gif" alt=""/></p>
 								<p className="tit">Planning</p>
 								<p className="desc">편의와 만족의 UX·UI 기획</p>
 							</li>
 							<li data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
-								<p className="img"><img src="/images/icon_work04.gif" alt=""/></p>
+								<p className="img"><img src="/assets/images/icon_work04.gif" alt=""/></p>
 								<p className="tit">Design</p>
 								<p className="desc">즐거움을 위한 UI·GUI 디자인</p>
 							</li>
 							<li data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">
-								<p className="img"><img src="/images/icon_work01.gif" alt=""/></p>
+								<p className="img"><img src="/assets/images/icon_work01.gif" alt=""/></p>
 								<p className="tit">Publishing</p>
 								<p className="desc">동일하게 보이는 퍼블리싱</p>
 							</li>
 							<li data-aos="fade-up" data-aos-delay="1200" data-aos-duration="1000">
-								<p className="img"><img src="/images/icon_work03.gif" alt=""/></p>
+								<p className="img"><img src="/assets/images/icon_work03.gif" alt=""/></p>
 								<p className="tit">Management</p>
 								<p className="desc">내일을 바라보는 운영</p>
 							</li>
@@ -141,16 +141,16 @@ const About = () => {
 					<div className="clients-list-wrap hide-mobile">
 						<ul>
 							<li data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/images/img_clients01.jpg" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_clients01.jpg" alt=""/></p>
 							</li>
 							<li data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/images/img_clients02.jpg" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_clients02.jpg" alt=""/></p>
 							</li>
 							<li data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/images/img_clients03.jpg" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_clients03.jpg" alt=""/></p>
 							</li>
 							<li data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/images/img_clients04.jpg" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_clients04.jpg" alt=""/></p>
 							</li>
 						</ul>
 					</div>
@@ -158,31 +158,31 @@ const About = () => {
 					<div className="clients-list-wrap hide-pc">
 						<ul>
 							<li data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/images/img_clients01_mo.jpg" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_clients01_mo.jpg" alt=""/></p>
 							</li>
 							<li data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/images/img_clients02_mo.jpg" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_clients02_mo.jpg" alt=""/></p>
 							</li>
 							<li data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/images/img_clients03_mo.jpg" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_clients03_mo.jpg" alt=""/></p>
 							</li>
 							<li data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/images/img_clients04_mo.jpg" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_clients04_mo.jpg" alt=""/></p>
 							</li>
 							<li data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/images/img_clients05_mo.jpg" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_clients05_mo.jpg" alt=""/></p>
 							</li>
 							<li data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/images/img_clients06_mo.jpg" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_clients06_mo.jpg" alt=""/></p>
 							</li>
 							<li data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/images/img_clients07_mo.jpg" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_clients07_mo.jpg" alt=""/></p>
 							</li>
 							<li data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/images/img_clients08_mo.jpg" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_clients08_mo.jpg" alt=""/></p>
 							</li>
 							<li data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/images/img_clients09_mo.jpg" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_clients09_mo.jpg" alt=""/></p>
 							</li>
 						</ul>
 					</div>

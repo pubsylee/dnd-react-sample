@@ -9,7 +9,7 @@ const Project = () => {
 				<div className="swiper-container project-swiper">
 					<div className="swiper-wrapper">
 						<div className="swiper-slide box-wrap bg-sc mask" data-aos="fade-up" data-aos-duration="1000">
-							<p className="img"><img src="../assets/images/img_pj_sc_thumb.png" alt=""/></p>
+							<p className="img"><img src="/assets/images/img_pj_sc_thumb.png" alt=""/></p>
 							<div className="hover-box">
 								<div className="box">
 									<p>SC 제일은행<br/><strong>모바일 기업뱅킹</strong></p>
@@ -18,7 +18,7 @@ const Project = () => {
 							</div>
 						</div>
 						<div className="swiper-slide box-wrap bg-cj mask" data-aos="fade-up" data-aos-duration="1000">
-							<p className="img"><img src="../assets/images/img_pj_cj_thumb.png" alt=""/></p>
+							<p className="img"><img src="/assets/images/img_pj_cj_thumb.png" alt=""/></p>
 							<div className="hover-box">
 								<div className="box">
 									<p>CJ대한통운<br/><strong>차세대 택배시스템</strong></p>
@@ -27,7 +27,7 @@ const Project = () => {
 							</div>
 						</div>
 						<div className="swiper-slide box-wrap bg-sc02 mask" data-aos="fade-up" data-aos-duration="1000">
-							<p className="img"><img src="../assets/images/img_pj_sc02_thumb.png" alt=""/></p>
+							<p className="img"><img src="/assets/images/img_pj_sc02_thumb.png" alt=""/></p>
 							<div className="hover-box">
 								<div className="box">
 									<p>SC제일은행<br/><strong>고령자 편한뱅킹</strong></p>
@@ -36,7 +36,7 @@ const Project = () => {
 							</div>
 						</div>
 						<div className="swiper-slide box-wrap bg-kb mask" data-aos="fade-up" data-aos-duration="1000">
-							<p className="img"><img src="../assets/images/img_pj_kb_thumb.png" alt=""/></p>
+							<p className="img"><img src="/assets/images/img_pj_kb_thumb.png" alt=""/></p>
 							<div className="hover-box">
 								<div className="box">
 									<p>KB국민은행<br/><strong>비대면 마케팅</strong></p>
@@ -46,7 +46,7 @@ const Project = () => {
 						</div>
 						<div className="swiper-slide box-wrap bg-ha" data-aos="fade-up" data-aos-duration="1000">
 							<p className="img">
-								<img src="../assets/images/img_pj_ha_thumb.png" alt=""/>
+								<img src="/assets/images/img_pj_ha_thumb.png" alt=""/>
 							</p>
 							<div className="hover-box">
 								<div className="box">
@@ -56,7 +56,7 @@ const Project = () => {
 							</div>
 							</div>
 							<div className="swiper-slide box-wrap bg-wo mask" data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="../assets/images/img_pj_wo_thumb.png" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_pj_wo_thumb.png" alt=""/></p>
 								<div className="hover-box">
 									<div className="box">
 										<p>우리은행 사설인증<br/><strong>우리WON인증</strong></p>
@@ -65,7 +65,7 @@ const Project = () => {
 								</div>
 							</div>
 							<div className="swiper-slide box-wrap bg-wo02 mask" data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="../assets/images/img_pj_wo02_thumb.png" alt=""/></p>
+								<p className="img"><img src="/assets/images/img_pj_wo02_thumb.png" alt=""/></p>
 								<div className="hover-box">
 									<div className="box">
 										<p>우리은행<br/><strong>마이데이터</strong></p>

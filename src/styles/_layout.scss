@@ -235,7 +235,7 @@
 	&.intro-wrap{
 		position: relative;
 		.pjt-top-full {
-			background: url('../images/bg_intro.jpg') center no-repeat;
+			background: url('../assets/images/bg_intro.jpg') center no-repeat;
 			background-size: cover;
 			height: 100vh;
 			@include vw-convert-pc(padding-top, 265);
@@ -257,7 +257,7 @@
 		.ico-mouse{
 			height: 76px;
 			width: 54px;
-			background: url(../images/scroll_case01.gif)no-repeat center / contain;
+			background: url(../assets/images/scroll_case01.gif)no-repeat center / contain;
 			position: absolute;
 			bottom: 30px;	
 			left: calc( 50% - 20px);
@@ -363,11 +363,11 @@
 						background-position: center;
 						@include vw-convert-pc(background-size, 81);
 						
-						&.ico-sc-aged01{background-image: url(../images/img_sc_aged_icon01.png);}
-						&.ico-sc-aged02{background-image: url(../images/img_sc_aged_icon02.png);}
-						&.ico-sc-aged03{background-image: url(../images/img_sc_aged_icon03.png);}
-						&.ico-sc-aged04{background-image: url(../images/img_sc_aged_icon04.png);}
-						&.ico-sc-aged05{background-image: url(../images/img_sc_aged_icon05.png);}
+						&.ico-sc-aged01{background-image: url(../assets/images/img_sc_aged_icon01.png);}
+						&.ico-sc-aged02{background-image: url(../assets/images/img_sc_aged_icon02.png);}
+						&.ico-sc-aged03{background-image: url(../assets/images/img_sc_aged_icon03.png);}
+						&.ico-sc-aged04{background-image: url(../assets/images/img_sc_aged_icon04.png);}
+						&.ico-sc-aged05{background-image: url(../assets/images/img_sc_aged_icon05.png);}
 					}
 				}
 
@@ -490,12 +490,12 @@
 
 
 		.pjt-top-full {
-			background: url('../images/bg_sc_default.jpg') center no-repeat;
+			background: url('../assets/images/bg_sc_default.jpg') center no-repeat;
 			background-size: cover;
 
 			.icon-if {
 				@include vw-convert-pc(padding-right, 100);
-				background: url(../images/ico-if.svg) right 10px no-repeat;
+				background: url(../assets/images/ico-if.svg) right 10px no-repeat;
 				background-size: 7%;
 				display: inline-block;
 			}
@@ -532,7 +532,7 @@
 
 		.pjt-con {
 			@include vw-convert-pc(padding, 160 20 150);
-			background: url(../images/bg_cj.jpg) center no-repeat;
+			background: url(../assets/images/bg_cj.jpg) center no-repeat;
 			background-size: cover;
 
 			.icon {
@@ -569,7 +569,7 @@
 		//     }
 		// }
 		.pjt-top-full {
-			background: url('../images/bg_wooriopen_default.jpg') center center no-repeat;
+			background: url('../assets/images/bg_wooriopen_default.jpg') center center no-repeat;
 			background-size: cover;
 		}
 
@@ -581,7 +581,7 @@
 
 			.phone-layout {
 				&.bg {
-					background: url('../images/img_wooriopen01_bg.png') center no-repeat;
+					background: url('../assets/images/img_wooriopen01_bg.png') center no-repeat;
 					background-size: 100%;
 					@include vw-convert-pc(max-width, 1155);
 					margin: 0 auto;
@@ -663,7 +663,7 @@
 
 	&.woori-certi {
 		.pjt-top-full {
-			background: url('../images/bg_wooricerti.jpg') center no-repeat;
+			background: url('../assets/images/bg_wooricerti.jpg') center no-repeat;
 			background-size: cover;
 			@include vw-convert-pc(padding-top, 200);
 			@include vw-convert-pc(padding-bottom, 1027);
@@ -1037,14 +1037,14 @@
 
 				.img {
 					// 지원안되는 브라우저 (색상변경은 안됨)
-					background-image: url(../images/bg_pj_sc.png);
+					background-image: url(../assets/images/bg_pj_sc.png);
 					background-size: contain;
 					
 					// 지원되는 브라우저
-					@supports (-webkit-mask-image: url(../images/bg_pj_sc.png)) or (mask-image: url(../images/bg_pj_sc.png)) {
+					@supports (-webkit-mask-image: url(../assets/images/bg_pj_sc.png)) or (mask-image: url(../assets/images/bg_pj_sc.png)) {
 						background-color: #2D2C2C;
-						-webkit-mask-image: url(../images/bg_pj_sc.png);
-						mask-image: url(../images/bg_pj_sc.png);
+						-webkit-mask-image: url(../assets/images/bg_pj_sc.png);
+						mask-image: url(../assets/images/bg_pj_sc.png);
 						-webkit-mask-size: 95%;
 						mask-size: 95%;
 						mask-repeat: no-repeat;
@@ -1058,14 +1058,14 @@
 
 				.img {
 					// 지원안되는 브라우저 (색상변경은 안됨)
-					background-image: url(../images/bg_pj_cj.png);
+					background-image: url(../assets/images/bg_pj_cj.png);
 					background-size: contain;
 					
 					// 지원되는 브라우저
-					@supports (-webkit-mask-image: url(../images/bg_pj_cj.png)) or (mask-image: url(../images/bg_pj_cj.png)) {
+					@supports (-webkit-mask-image: url(../assets/images/bg_pj_cj.png)) or (mask-image: url(../assets/images/bg_pj_cj.png)) {
 						background-color: #F3F3F3;
-						-webkit-mask-image: url(../images/bg_pj_cj.png);
-						mask-image: url(../images/bg_pj_cj.png);
+						-webkit-mask-image: url(../assets/images/bg_pj_cj.png);
+						mask-image: url(../assets/images/bg_pj_cj.png);
 						-webkit-mask-size: 95%;
 						mask-size: 95%;
 						mask-repeat: no-repeat;
@@ -1079,14 +1079,14 @@
 
 				.img {
 					// 지원안되는 브라우저 (색상변경은 안됨)
-					background-image: url(../images/bg_pj_sc.png);
+					background-image: url(../assets/images/bg_pj_sc.png);
 					background-size: contain;
 					
 					// 지원되는 브라우저
-					@supports (-webkit-mask-image: url(../images/bg_pj_sc.png)) or (mask-image: url(../images/bg_pj_sc.png)) {
+					@supports (-webkit-mask-image: url(../assets/images/bg_pj_sc.png)) or (mask-image: url(../assets/images/bg_pj_sc.png)) {
 						background-color: #E8F3FF;
-						-webkit-mask-image: url(../images/bg_pj_sc.png);
-						mask-image: url(../images/bg_pj_sc.png);
+						-webkit-mask-image: url(../assets/images/bg_pj_sc.png);
+						mask-image: url(../assets/images/bg_pj_sc.png);
 						-webkit-mask-size: 95%;
 						mask-size: 95%;
 						mask-repeat: no-repeat;
@@ -1100,14 +1100,14 @@
 
 				.img {
 					// 지원안되는 브라우저 (색상변경은 안됨)
-					background-image: url(../images/bg_pj_kb.png);
+					background-image: url(../assets/images/bg_pj_kb.png);
 					background-size: contain;
 					
 					// 지원되는 브라우저
-					@supports (-webkit-mask-image: url(../images/bg_pj_kb.png)) or (mask-image: url(../images/bg_pj_kb.png)) {
+					@supports (-webkit-mask-image: url(../assets/images/bg_pj_kb.png)) or (mask-image: url(../assets/images/bg_pj_kb.png)) {
 						background-color: #FFDE5B;
-						-webkit-mask-image: url(../images/bg_pj_kb.png);
-						mask-image: url(../images/bg_pj_kb.png);
+						-webkit-mask-image: url(../assets/images/bg_pj_kb.png);
+						mask-image: url(../assets/images/bg_pj_kb.png);
 						-webkit-mask-size: 95%;
 						mask-size: 95%;
 						mask-repeat: no-repeat;
@@ -1128,14 +1128,14 @@
 
 				.img {
 					// 지원안되는 브라우저 (색상변경은 안됨)
-					background-image: url(../images/bg_pj_wo.png);
+					background-image: url(../assets/images/bg_pj_wo.png);
 					background-size: contain;
 					
 					// 지원되는 브라우저
-					@supports (-webkit-mask-image: url(../images/bg_pj_wo.png)) or (mask-image: url(../images/bg_pj_wo.png)) {
+					@supports (-webkit-mask-image: url(../assets/images/bg_pj_wo.png)) or (mask-image: url(../assets/images/bg_pj_wo.png)) {
 						background-color: #E9ECFF;
-						-webkit-mask-image: url(../images/bg_pj_wo.png);
-						mask-image: url(../images/bg_pj_wo.png);
+						-webkit-mask-image: url(../assets/images/bg_pj_wo.png);
+						mask-image: url(../assets/images/bg_pj_wo.png);
 						-webkit-mask-size: 95%;
 						mask-size: 95%;
 						mask-repeat: no-repeat;
@@ -1149,14 +1149,14 @@
 
 				.img {
 					// 지원안되는 브라우저 (색상변경은 안됨)
-					background-image: url(../images/bg_pj_wo02.png);
+					background-image: url(../assets/images/bg_pj_wo02.png);
 					background-size: contain;
 					
 					// 지원되는 브라우저
-					@supports (-webkit-mask-image: url(../images/bg_pj_wo02.png)) or (mask-image: url(../images/bg_pj_wo02.png)) {
+					@supports (-webkit-mask-image: url(../assets/images/bg_pj_wo02.png)) or (mask-image: url(../assets/images/bg_pj_wo02.png)) {
 						background-color: #F3F3F3;
-						-webkit-mask-image: url(../images/bg_pj_wo02.png);
-						mask-image: url(../images/bg_pj_wo02.png);
+						-webkit-mask-image: url(../assets/images/bg_pj_wo02.png);
+						mask-image: url(../assets/images/bg_pj_wo02.png);
 						-webkit-mask-size: 95%;
 						mask-size: 95%;
 						mask-repeat: no-repeat;
@@ -1283,7 +1283,7 @@
     			height: 100%;
 
 					&:hover + .hover-box {
-						background: url(../images/bg_pj_sc_hover.png) 50% no-repeat;
+						background: url(../assets/images/bg_pj_sc_hover.png) 50% no-repeat;
 						background-size: contain;
 						z-index: 1;
 					}
@@ -1296,7 +1296,7 @@
     			height: 100%;
 
 					&:hover + .hover-box {
-						background: url(../images/bg_pj_cj_hover.png) 50% no-repeat;
+						background: url(../assets/images/bg_pj_cj_hover.png) 50% no-repeat;
 						background-size: contain;
 						z-index: 1;
 					}
@@ -1309,7 +1309,7 @@
     			height: 100%;
 
 					&:hover + .hover-box {
-						background: url(../images/bg_pj_sc_hover.png) 50% no-repeat;
+						background: url(../assets/images/bg_pj_sc_hover.png) 50% no-repeat;
 						background-size: contain;
 						z-index: 1;
 					}
@@ -1322,7 +1322,7 @@
     			height: 100%;
 
 					&:hover + .hover-box {
-						background: url(../images/bg_pj_kb_hover.png) 50% no-repeat;
+						background: url(../assets/images/bg_pj_kb_hover.png) 50% no-repeat;
 						background-size: contain;
 						z-index: 1;
 
@@ -1340,7 +1340,7 @@
     			height: 100%;
 
 					&:hover + .hover-box {
-						background: url(../images/bg_pj_ha_hover.png) 50% no-repeat;
+						background: url(../assets/images/bg_pj_ha_hover.png) 50% no-repeat;
 						background-size: contain;
 						z-index: 1;
 					}
@@ -1357,7 +1357,7 @@
     			height: 100%;
 
 					&:hover + .hover-box {
-						background: url(../images/bg_pj_wo_hover.png) 50% no-repeat;
+						background: url(../assets/images/bg_pj_wo_hover.png) 50% no-repeat;
 						background-size: contain;
 						z-index: 1;
 					}
@@ -1370,7 +1370,7 @@
     			height: 100%;
 					
 					&:hover + .hover-box {
-						background: url(../images/bg_pj_wo02_hover.png) 50% no-repeat;
+						background: url(../assets/images/bg_pj_wo02_hover.png) 50% no-repeat;
 						background-size: contain;
 						z-index: 1;
 					}
@@ -1391,7 +1391,7 @@
 	.accordion {
 		@include vw-convert-pc(padding, 40 160);
 		border-top: 1px solid #EEEEEE;
-		background: url(../images/icon_plus.png) calc(100% - 160px) 50% no-repeat;
+		background: url(../assets/images/icon_plus.png) calc(100% - 160px) 50% no-repeat;
 		@include vw-convert-pc(background-size, 42);
 		@include vw-font-size-pc(26);
 		line-height: 1.192;
@@ -1406,7 +1406,7 @@
 
 		&:hover,
 		&.active {
-			background: #000000 url(../images/icon_minus.png) calc(100% - 160px) 50% no-repeat;
+			background: #000000 url(../assets/images/icon_minus.png) calc(100% - 160px) 50% no-repeat;
 			@include vw-convert-pc(background-size, 42);
 			color: #FFFFFF;
 		}
@@ -1532,7 +1532,7 @@
 			}
 
 			li.webaward {
-				background: url(../images/icon_webaward.svg) right 0 no-repeat;
+				background: url(../assets/images/icon_webaward.svg) right 0 no-repeat;
 				background-size: contain;
 			}
 		}
@@ -2249,7 +2249,7 @@
 
 		&.intro-wrap{
 			.pjt-top-full {
-				background: url('../images/bg_intro_mo.jpg') center no-repeat;
+				background: url('../assets/images/bg_intro_mo.jpg') center no-repeat;
 				background-size: cover;
 				@include vw-convert-mo(padding-top, 212);
 				.pjt-title{
@@ -2437,7 +2437,7 @@
 			}
 
 			.pjt-top-full {
-				background: url('../images/bg_sc_mo.jpg') center no-repeat;
+				background: url('../assets/images/bg_sc_mo.jpg') center no-repeat;
 				background-size: cover;
 
 				.pjt-title {
@@ -2445,7 +2445,7 @@
 
 					.icon-if {
 						@include vw-convert-mo(padding-right, 60);
-						background: url(../images/ico-if.svg) right 72% no-repeat;
+						background: url(../assets/images/ico-if.svg) right 72% no-repeat;
 						background-size: 10%;
 					}
 				}
@@ -2474,7 +2474,7 @@
 			}
 
 			.pjt-top-full {
-				background: url('../images/bg_wooriopen_mo.jpg') center no-repeat;
+				background: url('../assets/images/bg_wooriopen_mo.jpg') center no-repeat;
 				background-size: cover;
 
 				.pjt-title {
@@ -2614,7 +2614,7 @@
 
 		&.woori-certi {
 			.pjt-top-full {
-				background: url('../images/bg_wooricerti_mo.jpg') center no-repeat;
+				background: url('../assets/images/bg_wooricerti_mo.jpg') center no-repeat;
 				background-size: cover;
 				height:auto;
 				padding: 0;
@@ -2982,7 +2982,7 @@
 		.accordion {
 			position: relative;
 			@include vw-convert-mo(padding, 40);
-			background: url(../images/icon_plus_mo.png) calc(100% - 20px) 50% no-repeat;
+			background: url(../assets/images/icon_plus_mo.png) calc(100% - 20px) 50% no-repeat;
 			background-size: 24px;
 			@include vw-font-size-mo(36);
 			letter-spacing: -0.36px;
@@ -2990,7 +2990,7 @@
 
 			&:hover,
 			&.active {
-				background: #000 url(../images/icon_minus_mo.png) calc(100% - 20px) 50% no-repeat;
+				background: #000 url(../assets/images/icon_minus_mo.png) calc(100% - 20px) 50% no-repeat;
 				background-size: 24px;
 			}
 

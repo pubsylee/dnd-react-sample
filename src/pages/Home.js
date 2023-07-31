@@ -50,13 +50,13 @@ const Home = () => {
                 고려한 UX/UI 환경을 제공합니다.
               </p>
               <div className="tool-list" data-aos="fade-up" data-aos-duration="1000">
-                <div><img src="/images/icon_ps.svg" alt="" /></div>
-                <div><img src="/images/icon_ai.svg" alt="" /></div>
-                <div><img src="/images/icon_pigma.svg" alt="" /></div>
+                <div><img src="/assets/images/icon_ps.svg" alt="" /></div>
+                <div><img src="/assets/images/icon_ai.svg" alt="" /></div>
+                <div><img src="/assets/images/icon_pigma.svg" alt="" /></div>
               </div>
 		        </div>
             <div className="pjt-top-img">
-              <img src="/images/img_sc_aged_motion.gif" alt="" className="sc-aged-motion" />
+              <img src="/assets/images/img_sc_aged_motion.gif" alt="" className="sc-aged-motion" />
             </div>
 	        </div>
           <div className="pjt-con">
@@ -94,10 +94,10 @@ const Home = () => {
             </div>
             <div className="phone-layout type02">
               <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
-                <img src="/images/img_sc_aged_phone01.gif " alt="" className="pjt-img"/>
+                <img src="/assets/images/img_sc_aged_phone01.gif " alt="" className="pjt-img"/>
               </div>
               <div data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
-                <img src="/images/img_sc_aged_phone02.gif " alt="" className="pjt-img"/>
+                <img src="/assets/images/img_sc_aged_phone02.gif " alt="" className="pjt-img"/>
               </div>
             </div>
           </div>
@@ -112,13 +112,13 @@ const Home = () => {
             </div>
             <div className="phone-layout">
               <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
-                <img src="/images/img_sc_aged_phone03.png " alt="" className="pjt-img"/>
+                <img src="/assets/images/img_sc_aged_phone03.png " alt="" className="pjt-img"/>
               </div>
               <div data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
-                <img src="/images/img_sc_aged_phone04.png " alt="" className="pjt-img"/>
+                <img src="/assets/images/img_sc_aged_phone04.png " alt="" className="pjt-img"/>
               </div>
               <div data-aos="fade-left" data-aos-delay="900" data-aos-duration="1000">
-                <img src="/images/img_sc_aged_phone05.png " alt="" className="pjt-img"/>
+                <img src="/assets/images/img_sc_aged_phone05.png " alt="" className="pjt-img"/>
               </div>
             </div>
           </div>
@@ -138,7 +138,7 @@ const Home = () => {
               </p>
             </div>
             <div className="pjt-top-img" data-aos="fade-left" data-aos-duration="1000">
-              <img src="/images/img_sc_splash.png" alt="sc제일은행 이미지" className=""/>
+              <img src="/assets/images/img_sc_splash.png" alt="sc제일은행 이미지" className=""/>
             </div>
           </div>
           <div className="pjt-con">
@@ -151,10 +151,10 @@ const Home = () => {
             </div>
             <div className="phone-layout type02">
               <div data-aos="fade-up" data-aos-duration="1000">
-                <img src="/images/img_sc01.png" alt="" className="pjt-img"/>
+                <img src="/assets/images/img_sc01.png" alt="" className="pjt-img"/>
               </div>
               <div className="mt160" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                <img src="/images/img_sc02.png" alt="" className="pjt-img"/>
+                <img src="/assets/images/img_sc02.png" alt="" className="pjt-img"/>
               </div>
             </div>
             <div className="pjt-title type02 white">
@@ -164,14 +164,14 @@ const Home = () => {
               </p>
             </div>
             <div className="phone-layout">
-              <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000"><img src="/images/img_sc03.png "
+              <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000"><img src="/assets/images/img_sc03.png "
                   alt="" className="pjt-img"/>
               </div>
-              <div data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000"><img src="/images/img_sc04.png"
+              <div data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000"><img src="/assets/images/img_sc04.png"
                   alt="" className="pjt-img"/>
               </div>
               <div className="hide-mobile" data-aos="fade-right" data-aos-delay="900" data-aos-duration="1000">
-                <img src="/images/img_sc05.png" alt="" className="pjt-img"/>
+                <img src="/assets/images/img_sc05.png" alt="" className="pjt-img"/>
               </div>
             </div>
           </div>
@@ -191,35 +191,35 @@ const Home = () => {
                 고객층의 참여를 확대합니다.
               </p>
               <div className="tool-list" data-aos="fade-up" data-aos-duration="1000">
-                <div><img src="/images/icon_ps.svg" alt=""/></div>
-                <div><img src="/images/icon_ai.svg" alt=""/></div>
-                <div><img src="/images/icon_pigma.svg" alt=""/></div>
+                <div><img src="/assets/images/icon_ps.svg" alt=""/></div>
+                <div><img src="/assets/images/icon_ai.svg" alt=""/></div>
+                <div><img src="/assets/images/icon_pigma.svg" alt=""/></div>
               </div>
             </div>
             <div className="pjt-top-img">
               <div className="swiper-container splash-swiper">
                 <div className="swiper-wrapper">
                   <div className="swiper-slide">
-                    <img src="/images/img_kb_splash01.jpg" alt="kb국민은행 이미지" className="pjt-img"/>
+                    <img src="/assets/images/img_kb_splash01.jpg" alt="kb국민은행 이미지" className="pjt-img"/>
                   </div>
                   <div className="swiper-slide">
-                    <img src="/images/img_kb_splash02.jpg" alt="kb국민은행 이미지" className="pjt-img"/>
+                    <img src="/assets/images/img_kb_splash02.jpg" alt="kb국민은행 이미지" className="pjt-img"/>
                   </div>
                   <div className="swiper-slide">
-                    <img src="/images/img_kb_splash03.jpg" alt="kb국민은행 이미지" className="pjt-img"/>
+                    <img src="/assets/images/img_kb_splash03.jpg" alt="kb국민은행 이미지" className="pjt-img"/>
                   </div>
                   <div className="swiper-slide">
-                    <img src="/images/img_kb_splash04.jpg" alt="kb국민은행 이미지" className="pjt-img"/>
+                    <img src="/assets/images/img_kb_splash04.jpg" alt="kb국민은행 이미지" className="pjt-img"/>
                   </div>
                   <div className="swiper-slide">
-                    <img src="/images/img_kb_splash05.jpg" alt="kb국민은행 이미지" className="pjt-img"/>
+                    <img src="/assets/images/img_kb_splash05.jpg" alt="kb국민은행 이미지" className="pjt-img"/>
                   </div>
                   <div className="swiper-slide">
-                    <img src="/images/img_kb_splash06.jpg" alt="kb국민은행 이미지" className="pjt-img"/>
+                    <img src="/assets/images/img_kb_splash06.jpg" alt="kb국민은행 이미지" className="pjt-img"/>
                   </div>
                 </div>
               </div>
-              {/* <!-- <img src="../assets/images/img_kb_splash.png" alt="kb국민은행 이미지" className="pjt-img gs-up gs-left"> --> */}
+              {/* <!-- <img src="../assets/assets/images/img_kb_splash.png" alt="kb국민은행 이미지" className="pjt-img gs-up gs-left"> --> */}
               <div className="bg-area">
                 <span className="circle type01 gs-up"></span>
                 <span className="circle type02 gs-up"></span>
@@ -237,13 +237,13 @@ const Home = () => {
             </div>
             <div className="phone-layout">
               <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
-                <img src="/images/img_kb01.png" alt="" className="pjt-img"/>
+                <img src="/assets/images/img_kb01.png" alt="" className="pjt-img"/>
               </div>
               <div data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
-                <img src="/images/img_kb02.png" alt="" className="pjt-img"/>
+                <img src="/assets/images/img_kb02.png" alt="" className="pjt-img"/>
               </div>
               <div className="hide-mobile" data-aos="fade-left" data-aos-delay="900" data-aos-duration="1000">
-                <img src="/images/img_kb03.png" alt="" className="pjt-img"/>
+                <img src="/assets/images/img_kb03.png" alt="" className="pjt-img"/>
               </div>
             </div>
           </div>
@@ -261,18 +261,18 @@ const Home = () => {
                 사용자의 여정에서 발생하는 일련의 과정 및 상태를<br className="hide-mobile"/>직관적으로 인지할 수 있도록 디자인합니다.
               </p>
               <div className="tool-list" data-aos="fade-up" data-aos-duration="1000">
-                <div><img src="/images/icon_ps.svg" alt=""/></div>
-                <div><img src="/images/icon_ai.svg" alt=""/></div>
-                <div><img src="/images/icon_xd.svg" alt=""/></div>
-                <div><img src="/images/icon_pigma.svg" alt=""/></div>
+                <div><img src="/assets/images/icon_ps.svg" alt=""/></div>
+                <div><img src="/assets/images/icon_ai.svg" alt=""/></div>
+                <div><img src="/assets/images/icon_xd.svg" alt=""/></div>
+                <div><img src="/assets/images/icon_pigma.svg" alt=""/></div>
               </div>
             </div>
             <div className="pjt-top-img">
               <div className="pjt-img01" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
-                <img src="/images/img_cj_splash01.png" alt="CJ대한통운 이미지" className=""/>
+                <img src="/assets/images/img_cj_splash01.png" alt="CJ대한통운 이미지" className=""/>
               </div>
               <div className="pjt-img02" data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000">
-                <img src="/images/img_cj_splash02.png" alt="CJ대한통운 이미지" className=""/>
+                <img src="/assets/images/img_cj_splash02.png" alt="CJ대한통운 이미지" className=""/>
               </div>
             </div>
           </div>
@@ -285,17 +285,17 @@ const Home = () => {
               </p>
             </div>
             <div className="icon" data-aos="fade-up" data-aos-duration="1000">
-              <img src="/images/img_cj_icon2.png" alt=""/>
+              <img src="/assets/images/img_cj_icon2.png" alt=""/>
             </div>
             <div className="phone-layout">
               <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
-                <img src="/images/img_cj01.png" alt="" className="pjt-img"/>
+                <img src="/assets/images/img_cj01.png" alt="" className="pjt-img"/>
               </div>
               <div data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
-                <img src="/images/img_cj02.png" alt="" className="pjt-img"/>
+                <img src="/assets/images/img_cj02.png" alt="" className="pjt-img"/>
               </div>
               <div className="hide-mobile" data-aos="fade-left" data-aos-delay="900" data-aos-duration="1000">
-                <img src="/images/img_cj03.png" alt="" className="pjt-img"/>
+                <img src="/assets/images/img_cj03.png" alt="" className="pjt-img"/>
               </div>
             </div>
           </div>
@@ -317,23 +317,23 @@ const Home = () => {
                   마이데이터 서비스 이용이 가능한 환경을 제공합니다.
                 </p>
                 <div className="tool-list" data-aos="fade-up" data-aos-duration="1000">
-                  <div><img src="/images/icon_ps.svg" alt=""/></div>
-                  <div><img src="/images/icon_ai.svg" alt=""/></div>
-                  <div><img src="/images/icon_pigma.svg" alt=""/></div>
+                  <div><img src="/assets/images/icon_ps.svg" alt=""/></div>
+                  <div><img src="/assets/images/icon_ai.svg" alt=""/></div>
+                  <div><img src="/assets/images/icon_pigma.svg" alt=""/></div>
                 </div>
               </div>
               <div className="pjt-top-img" data-aos="fade-right" data-aos-duration="1000">
                 <div className="bg-area">
                   <div className="woori_bg_left">
-                  <img src="/images/img_woorimy_left.png" alt="" className="hide-mobile"/>
-                  <img src="/images/img_woorimy_left_mo.png" alt="" className="hide-pc"/>
+                  <img src="/assets/images/img_woorimy_left.png" alt="" className="hide-mobile"/>
+                  <img src="/assets/images/img_woorimy_left_mo.png" alt="" className="hide-pc"/>
                 </div>
                   <div className="splash-img">
-                    <img src="/images/img_woorimy_splash.gif" alt=""/>
+                    <img src="/assets/images/img_woorimy_splash.gif" alt=""/>
                   </div>
                   <div className="woori_bg_right">
-                  <img src="/images/img_woorimy_right.png" alt="" className="hide-mobile"/>
-                  <img src="/images/img_woorimy_right_mo.png" alt="" className="hide-pc"/>
+                  <img src="/assets/images/img_woorimy_right.png" alt="" className="hide-mobile"/>
+                  <img src="/assets/images/img_woorimy_right_mo.png" alt="" className="hide-pc"/>
                 </div>
                 </div>
               </div>
@@ -341,40 +341,40 @@ const Home = () => {
             <div className="pjt-con bg01">
               <div className="phone-layout type02">
                 <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"><img
-                    src="/images/img_woorimy01.png" alt="" className="pjt-img"/></div>
+                    src="/assets/images/img_woorimy01.png" alt="" className="pjt-img"/></div>
                 <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000"><img
-                    src="/images/img_woorimy02.png" alt="" className="pjt-img"/></div>
+                    src="/assets/images/img_woorimy02.png" alt="" className="pjt-img"/></div>
               </div>
             </div>
             <div className="pjt-con bg02">
               <div className="icon-list-wrap">
                 <ul>
                   <li data-aos="fade-right" data-aos-duration="1000">
-                    <img src="/images/icon_woorimy01.svg" alt=""/>
+                    <img src="/assets/images/icon_woorimy01.svg" alt=""/>
                     <p className="txt">카페</p>
                   </li>
                   <li data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
-                    <img src="/images/icon_woorimy02.svg" alt=""/>
+                    <img src="/assets/images/icon_woorimy02.svg" alt=""/>
                     <p className="txt">외식</p>
                   </li>
                   <li data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000">
-                    <img src="/images/icon_woorimy03.svg" alt=""/>
+                    <img src="/assets/images/icon_woorimy03.svg" alt=""/>
                     <p className="txt">편의점</p>
                   </li>
                   <li data-aos="fade-right" data-aos-delay="900" data-aos-duration="1000">
-                    <img src="/images/icon_woorimy04.svg" alt=""/>
+                    <img src="/assets/images/icon_woorimy04.svg" alt=""/>
                     <p className="txt">대형마트</p>
                   </li>
                   <li data-aos="fade-right" data-aos-delay="1200" data-aos-duration="1000">
-                    <img src="/images/icon_woorimy05.svg" alt=""/>
+                    <img src="/assets/images/icon_woorimy05.svg" alt=""/>
                     <p className="txt">세금/공과금</p>
                   </li>
                   <li data-aos="fade-right" data-aos-delay="1500" data-aos-duration="1000">
-                    <img src="/images/icon_woorimy06.svg" alt=""/>
+                    <img src="/assets/images/icon_woorimy06.svg" alt=""/>
                     <p className="txt">저축/투자</p>
                   </li>
                   <li data-aos="fade-right" data-aos-delay="1800" data-aos-duration="1000">
-                    <img src="/images/icon_woorimy07.svg" alt=""/>
+                    <img src="/assets/images/icon_woorimy07.svg" alt=""/>
                     <p className="txt">보험</p>
                   </li>
                 </ul>
@@ -393,11 +393,11 @@ const Home = () => {
             </div>
             <div className="phone-layout">
               <div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000"><img
-                  src="/images/img_woorimy03.png" alt="" className="pjt-img"/></div>
+                  src="/assets/images/img_woorimy03.png" alt="" className="pjt-img"/></div>
               <div data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000"><img
-                  src="/images/img_woorimy04.png" alt="" className="pjt-img"/></div>
+                  src="/assets/images/img_woorimy04.png" alt="" className="pjt-img"/></div>
               <div className="hide-mobile" data-aos="fade-left" data-aos-delay="900" data-aos-duration="1000"><img
-                  src="/images/img_woorimy05.png" alt="" className="pjt-img"/></div>
+                  src="/assets/images/img_woorimy05.png" alt="" className="pjt-img"/></div>
             </div>
           </div>
         </section>
@@ -416,7 +416,7 @@ const Home = () => {
               </p>
             </div>
             <div className="pjt-img-wrap hide-pc" data-aos="fade-up" data-aos-duration="1000">
-              <img src="/images/bg_wooricerti_phone_mo.png" alt="우리은행 사설인증 이미지" className=""/>
+              <img src="/assets/images/bg_wooricerti_phone_mo.png" alt="우리은행 사설인증 이미지" className=""/>
             </div>
           </div>
           <div className="pjt-con">
@@ -429,9 +429,9 @@ const Home = () => {
             </div>
             <div className="phone-layout type02">
               <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000"><img
-                  src="/images/img_wooricerti01.png" alt="" className="pjt-img"/></div>
+                  src="/assets/images/img_wooricerti01.png" alt="" className="pjt-img"/></div>
               <div data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000"><img
-                  src="/images/img_wooricerti02.png" alt="" className="pjt-img"/></div>
+                  src="/assets/images/img_wooricerti02.png" alt="" className="pjt-img"/></div>
             </div>
           </div>
         </section>
@@ -449,7 +449,7 @@ const Home = () => {
               </p>
             </div>
             <div className="pjt-top-img" data-aos="fade-right" data-aos-duration="1000">
-              <img src="/images/img_wooriopen_splash.png" alt="우리은행 오픈뱅킹 시스템 이미지" className=""/>
+              <img src="/assets/images/img_wooriopen_splash.png" alt="우리은행 오픈뱅킹 시스템 이미지" className=""/>
             </div>
           </div>
           <div className="pjt-con">
@@ -462,18 +462,18 @@ const Home = () => {
             </div>
             <div className="phone-layout bg">
               <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000"><img
-                  src="/images/img_wooriopen01.png" alt="" className="pjt-img"/>
+                  src="/assets/images/img_wooriopen01.png" alt="" className="pjt-img"/>
               </div>
             </div>
             <div className="phone-layout">
               <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000"><img
-                  src="/images/img_wooriopen02.png" alt="" className="pjt-img"/>
+                  src="/assets/images/img_wooriopen02.png" alt="" className="pjt-img"/>
               </div>
               <div data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000"><img
-                  src="/images/img_wooriopen03.png" alt="" className="pjt-img"/>
+                  src="/assets/images/img_wooriopen03.png" alt="" className="pjt-img"/>
               </div>
               <div className="hide-mobile" data-aos="fade-right" data-aos-delay="900" data-aos-duration="1000"><img
-                  src="/images/img_wooriopen04.png" alt="" className="pjt-img"/></div>
+                  src="/assets/images/img_wooriopen04.png" alt="" className="pjt-img"/></div>
             </div>
           </div>
         </section>
