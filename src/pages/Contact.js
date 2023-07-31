@@ -1,4 +1,6 @@
+
 import { Link } from "react-router-dom";
+import MapComponent from "../components/common/Map";
 
 const Contact = () => {
   return (
@@ -9,7 +11,7 @@ const Contact = () => {
 					<h2><strong>풍부한 경험과 전문성</strong>으로 <br className="hide-pc"/>보답합니다</h2>
 				</div>
 				<div className="map-wrap" data-aos="fade-up" data-aos-duration="1000">
-					<div id="map"></div>
+					<MapComponent />
 				</div>
 				<div className="info-wrap" data-aos="fade-up" data-aos-duration="1000">
 					<dl className="addr">

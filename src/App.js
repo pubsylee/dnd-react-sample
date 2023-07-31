@@ -11,9 +11,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<Home />} title='타이틀' />
-          <Route path="/project" element={<Project title='프로젝트' />} />
+        <Route path="/" element={<MainLayout/>}>
+          <Route index element={<Home isMain={true} />}  />
+          <Route path="/project" element={<Project />} />
           <Route path="/about" element={<About />} />
           <Route path="/recruit" element={<Recruit />} />
           <Route path="/contact" element={<Contact />} />

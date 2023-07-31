@@ -1,81 +1,239 @@
+import $ from 'jquery';
+import { useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+
 const Project = () => {
+	var activeSlideIndex = 0;
+	function rotateSlide(index) {
+		var slides = document.querySelectorAll('.project-swiper .swiper-slide');
+
+		for (var i = 0; i < slides.length; i++) {
+			var slide = slides[i];
+			if (i === index) {
+				slide.querySelector('.img').style.transform = "rotate(45deg)";
+				slide.querySelector('img').style.transform = "rotatd(265deg)";
+			} else {
+				slide.querySelector('.img').style.transform = "";
+			}
+		}
+	}
+
+	useEffect(()=>{
+		/**
+		 * ==============================+
+		 * 아코디언
+		 * ==============================+
+		 */
+		$('.accordion').on('click', function (e) {
+			e.preventDefault()
+	
+			const $siblings = $('.accordion')
+	
+			$siblings.next('.panel').slideUp()
+			$siblings.removeClass('active')
+	
+			const $this = $(this)
+			const $parent = $this.parent()
+			const $nextToggleContents = $this.next('.panel')
+	
+			if ($this.next('.panel').is(':hidden')) {
+				$this.addClass('active');
+				$nextToggleContents.slideDown(function() {
+					let offsetTop = $parent.offset().top;
+					let gnbHeight = $('header').outerHeight();
+
+					$('html, body').animate({ 
+						scrollTop: offsetTop - gnbHeight
+					}, 300);
+
+					// 화면 너비가 768px보다 작을 경우
+					let screenWidth = $(window).width();
+					if (screenWidth < 768) {
+						offsetTop = $parent.offset().top;
+						gnbHeight = $('header').outerHeight();
+
+						$('html, body').animate({ 
+								scrollTop: offsetTop - gnbHeight
+						}, 300);
+					}
+				});
+				return;
+			} else {
+				$this.removeClass('active')
+				$nextToggleContents.slideUp();
+			}
+		})
+
+		/**
+		 * ==============================+
+		 * 탭
+		 * ==============================+
+		 */
+		$(".tab-top > ul > li").on('click',function() {
+			var tabIdx = $(this).index();
+			$(this).addClass("on").siblings().removeClass("on");
+			$(".tab-detail").eq(tabIdx).addClass("on").siblings().removeClass("on");
+			$(".tab-detail").fadeOut(0);
+			$(".tab-detail").eq(tabIdx).fadeIn(600);
+		});
+
+		function tabScollHorizen() {
+			if (tabScollHorizen.read) {
+				return;
+			}
+			tabScollHorizen = this.scrollWidth - (Math.floor(this.scrollLeft)) === this.clientWidth;
+			if(tabScollHorizen === true ){
+					$('.bg.hide-pc').css('display','none');
+					$('.tab-top ul').css('justify-content','');
+			}else{
+					$('.bg.hide-pc').css('display','block');
+					$('.tab-top ul').css('justify-content','flex-start');
+			}
+		}
+
+		if($(".tab-top ul").length > 0) {
+			var tabList = document.querySelector(".tab-top ul");
+			tabList.onscroll = tabScollHorizen;
+		}		
+	},[])
   return (
     <section className="project-wrap">
 			<div className="project-box">
-				<div className="title-wrap" data-aos="fade-up" data-aos-duration="1000">
+				<div className="title-wrap" data-aos-duration="1000">
 					<p>Our Experience</p>
 					<h2>고객의 생각을 <br className="hide-pc"/><strong>디자인으로 실현</strong>합니다</h2>
 				</div>
-				<div className="swiper-container project-swiper">
-					<div className="swiper-wrapper">
-						<div className="swiper-slide box-wrap bg-sc mask" data-aos="fade-up" data-aos-duration="1000">
-							<p className="img"><img src="/assets/images/img_pj_sc_thumb.png" alt=""/></p>
-							<div className="hover-box">
-								<div className="box">
-									<p>SC 제일은행<br/><strong>모바일 기업뱅킹</strong></p>
-									<button type="button">GO</button>
-								</div>
+				<Swiper
+					slidesPerView={6.1}
+					spaceBetween={74}
+					centeredSlides={true}
+					direction='horizon'
+					roundLengths={true}
+					loop={true}
+					loopedSlides={7}
+					observer={true}
+					observeParents={true}
+					speed={1000}
+					autoplay={{
+						delay: 3500,
+						disableOnInteraction: false,
+					}}
+					breakpoints={{
+						768: {
+						slidesPerView: 2,
+						spaceBetween: 10,
+						loop: true,
+						centeredSlides: true,
+						speed: 600,
+						autoplay: {
+						delay: 3000,
+						disableOnInteraction: false,
+					},
+				}
+					}}
+					modules={[Autoplay]}
+					className="project-swiper"
+					on={{
+						init: function() {
+							activeSlideIndex = this.activeIndex;
+							rotateSlide(this.activeIndex);		
+						},
+						slideChange: function() {
+							rotateSlide(this.activeIndex);
+
+							// 이전 활성화된 슬라이드의 이미지 변경
+							var prevSlide = this.slides[this.previousIndex];
+							var prevImageElement = prevSlide.querySelector('img');
+		
+							if (prevImageElement) {
+								var imageUrl = prevImageElement.src;
+								var pngUrl = imageUrl.replace('.gif', '.png');
+								prevImageElement.src = pngUrl;
+							}
+		
+							// 활성화된 슬라이드의 이미지 변경
+							var activeSlide = this.slides[this.activeIndex];
+							var activeImageElement = activeSlide.querySelector('img');
+		
+							if (activeImageElement) {
+								if(this.activeIndex === 8 || this.activeIndex === 11 || this.activeIndex === 12 || this.activeIndex === 13) {
+									var imageUrl = activeImageElement.src;
+									var gifUrl = imageUrl.replace('.png', '.gif');
+									activeImageElement.src = gifUrl;
+								}
+							}
+						}
+					}}
+				>
+					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
+						<p className="img"><img src="/assets/images/img_pj_sc_thumb.png" alt=""/></p>
+						<div className="hover-box">
+							<div className="box">
+								<p>SC 제일은행<br/><strong>모바일 기업뱅킹</strong></p>
+								<button type="button">GO</button>
 							</div>
 						</div>
-						<div className="swiper-slide box-wrap bg-cj mask" data-aos="fade-up" data-aos-duration="1000">
-							<p className="img"><img src="/assets/images/img_pj_cj_thumb.png" alt=""/></p>
-							<div className="hover-box">
-								<div className="box">
-									<p>CJ대한통운<br/><strong>차세대 택배시스템</strong></p>
-									<button type="button">GO</button>
-								</div>
+					</SwiperSlide>
+					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
+						<p className="img"><img src="/assets/images/img_pj_cj_thumb.png" alt=""/></p>
+						<div className="hover-box">
+							<div className="box">
+								<p>CJ대한통운<br/><strong>차세대 택배시스템</strong></p>
+								<button type="button">GO</button>
 							</div>
 						</div>
-						<div className="swiper-slide box-wrap bg-sc02 mask" data-aos="fade-up" data-aos-duration="1000">
-							<p className="img"><img src="/assets/images/img_pj_sc02_thumb.png" alt=""/></p>
-							<div className="hover-box">
-								<div className="box">
-									<p>SC제일은행<br/><strong>고령자 편한뱅킹</strong></p>
-									<button type="button">GO</button>
-								</div>
+					</SwiperSlide>
+					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
+						<p className="img"><img src="/assets/images/img_pj_sc02_thumb.png" alt=""/></p>
+						<div className="hover-box">
+							<div className="box">
+								<p>SC제일은행<br/><strong>고령자 편한뱅킹</strong></p>
+								<button type="button">GO</button>
 							</div>
 						</div>
-						<div className="swiper-slide box-wrap bg-kb mask" data-aos="fade-up" data-aos-duration="1000">
-							<p className="img"><img src="/assets/images/img_pj_kb_thumb.png" alt=""/></p>
-							<div className="hover-box">
-								<div className="box">
-									<p>KB국민은행<br/><strong>비대면 마케팅</strong></p>
-									<button type="button">GO</button>
-								</div>
+					</SwiperSlide>
+					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
+						<p className="img"><img src="/assets/images/img_pj_kb_thumb.png" alt=""/></p>
+						<div className="hover-box">
+							<div className="box">
+								<p>KB국민은행<br/><strong>비대면 마케팅</strong></p>
+								<button type="button">GO</button>
 							</div>
 						</div>
-						<div className="swiper-slide box-wrap bg-ha" data-aos="fade-up" data-aos-duration="1000">
-							<p className="img">
-								<img src="/assets/images/img_pj_ha_thumb.png" alt=""/>
-							</p>
-							<div className="hover-box">
-								<div className="box">
-									<p>하나카드<br/><strong>하나머니 고도화</strong></p>
-									<button type="button">GO</button>
-								</div>
+					</SwiperSlide>
+					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
+						<p className="img">
+							<img src="/assets/images/img_pj_ha_thumb.png" alt=""/>
+						</p>
+						<div className="hover-box">
+							<div className="box">
+								<p>하나카드<br/><strong>하나머니 고도화</strong></p>
+								<button type="button">GO</button>
 							</div>
-							</div>
-							<div className="swiper-slide box-wrap bg-wo mask" data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/assets/images/img_pj_wo_thumb.png" alt=""/></p>
-								<div className="hover-box">
-									<div className="box">
-										<p>우리은행 사설인증<br/><strong>우리WON인증</strong></p>
-										<button type="button">GO</button>
-									</div>
-								</div>
-							</div>
-							<div className="swiper-slide box-wrap bg-wo02 mask" data-aos="fade-up" data-aos-duration="1000">
-								<p className="img"><img src="/assets/images/img_pj_wo02_thumb.png" alt=""/></p>
-								<div className="hover-box">
-									<div className="box">
-										<p>우리은행<br/><strong>마이데이터</strong></p>
-										<button type="button">GO</button>
-									</div>
-								</div>
 						</div>
-					</div>
-				</div>
-				</div>
+					</SwiperSlide>
+					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
+						<p className="img"><img src="/assets/images/img_pj_wo_thumb.png" alt=""/></p>
+						<div className="hover-box">
+							<div className="box">
+								<p>우리은행 사설인증<br/><strong>우리WON인증</strong></p>
+								<button type="button">GO</button>
+							</div>
+						</div>
+					</SwiperSlide>
+					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
+						<p className="img"><img src="/assets/images/img_pj_wo02_thumb.png" alt=""/></p>
+						<div className="hover-box">
+							<div className="box">
+								<p>우리은행<br/><strong>마이데이터</strong></p>
+								<button type="button">GO</button>
+							</div>
+						</div>
+					</SwiperSlide>
+				</Swiper>
+			</div>
 				<div className="project-box">
 					<div className="tab-top">
 						<ul>

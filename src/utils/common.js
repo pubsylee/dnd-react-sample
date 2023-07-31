@@ -138,9 +138,9 @@ menuToggle.addEventListener('click', function(){
 });
 
 
-$(".menu-toggle").on('click', function(){
-	$('.fullpage-menu').toggleClass('on');
-})
+// $(".menu-toggle").on('click', function(){
+// 	$('.fullpage-menu').toggleClass('on');
+// })
 
 
 /**
