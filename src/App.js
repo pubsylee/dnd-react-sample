@@ -6,7 +6,6 @@ import Recruit from './pages/Recruit';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import MainLayout from './layout/MainLayout';
-import Sample from './pages/About/Sample';
 
 function App() {
   return (
@@ -15,9 +14,7 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} title='타이틀' />
           <Route path="/project" element={<Project title='프로젝트' />} />
-          <Route path="/about" element={<About />} >
-            <Route path='sample' element={<Sample />} />
-          </Route>
+          <Route path="/about" element={<About />} />
           <Route path="/recruit" element={<Recruit />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<NotFound />} />
