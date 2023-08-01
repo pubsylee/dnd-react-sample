@@ -1,10 +1,12 @@
 import $ from 'jquery';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 const Project = () => {
+	const swiperRef = useRef(null)
+
 	function rotateSlide(index) {
 		var slides = document.querySelectorAll('.project-swiper .swiper-slide');
 
@@ -104,128 +106,142 @@ const Project = () => {
 					<p>Our Experience</p>
 					<h2>고객의 생각을 <br className="hide-pc"/><strong>디자인으로 실현</strong>합니다</h2>
 				</div>
-				<Swiper
-					slidesPerView={2}
-					spaceBetween={10}
-					centeredSlides={true}
-					roundLengths={true}
-					loop={true}
-					loopedSlides={1}
-					observer={true}
-					observeParents={true}
-					speed={600}
-					autoplay={{ delay: 3000, disableOnInteraction: false }}
-			
-					breakpoints={{
-						768: {
-							slidesPerView: 6.1,
-							spaceBetween: 74,
-							speed: 1000,
-							autoplay: {
-								delay: 3500,
-								disableOnInteraction: false
-							}
-						}
-					}}
-					onInit={(swiperCore)=>{
-						const {activeIndex} = swiperCore;
-						rotateSlide(activeIndex);
-					}}
-					onSlideChange={(swiperCore)=>{
-						const {activeIndex, previousIndex, slides} = swiperCore;
-						rotateSlide(activeIndex);
-
-						// 이전 활성화된 슬라이드의 이미지 변경
-						var prevSlide = slides[previousIndex];
-						var prevImageElement = prevSlide.querySelector('img');
-	
-						if (prevImageElement) {
-							var imageUrl = prevImageElement.src;
-							var pngUrl = imageUrl.replace('.gif', '.png');
-							prevImageElement.src = pngUrl;
-						}
-		
-						// 활성화된 슬라이드의 이미지 변경
-						var activeSlide = slides[activeIndex];
-						var activeImageElement = activeSlide.querySelector('img');
-	
-						if (activeImageElement) {
-							if(activeIndex === 8 || activeIndex === 11 || activeIndex === 12 || activeIndex === 13) {
-								var imageUrl = activeImageElement.src;
-								var gifUrl = imageUrl.replace('.png', '.gif');
-								activeImageElement.src = gifUrl;
-							}
-						}
-					}}
-					className='project-swiper'
-					modules={[Autoplay]}
+				<div 
+					data-aos="fade-up" 
+					data-aos-duration="1000"
+					onMouseEnter={() => swiperRef.current.swiper.autoplay.stop()}
+					onMouseLeave={() => swiperRef.current.swiper.autoplay.start()}
 				>
-					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
-						<p className="img"><img src="/assets/images/img_pj_sc_thumb.png" alt=""/></p>
-						<div className="hover-box">
-							<div className="box">
-								<p>SC 제일은행<br/><strong>모바일 기업뱅킹</strong></p>
-								<button type="button">GO</button>
+					<Swiper
+						ref={swiperRef}
+						slidesPerView={2}
+						spaceBetween={10}
+						centeredSlides={true}
+						roundLengths={true}
+						loop={true}
+						loopedSlides={1}
+						observer={true}
+						observeParents={true}
+						speed={600}
+						autoplay={{ delay: 3000, disableOnInteraction: false }}
+						className='project-swiper'
+						modules={[Autoplay]}
+						breakpoints={{
+							768: {
+								slidesPerView: 6.1,
+								spaceBetween: 74,
+								loop: true,
+								loopedSlides: 1,
+								speed: 1000,
+								autoplay: {
+									delay: 3500,
+									disableOnInteraction: false,
+								}
+							}
+						}}
+						onInit={(e)=>{
+							const {activeIndex} = e;
+							rotateSlide(activeIndex);
+						}}
+						onSlideChange={(e)=>{
+							const {activeIndex} = e;
+							rotateSlide(activeIndex);
+						}}
+						onSlideChangeTransitionStart={(e)=>{
+							const {activeIndex ,realIndex, previousIndex, slides} = e;
+
+							console.log(e, slides);
+							// 이전 활성화된 슬라이드의 이미지 변경
+							var prevSlide = slides[previousIndex];
+							var prevImageElement = prevSlide.querySelector('img');
+		
+							if (prevImageElement) {
+								var imageUrl = prevImageElement.src;
+								var pngUrl = imageUrl.replace('.gif', '.png');
+								prevImageElement.src = pngUrl;
+							}
+			
+							// 활성화된 슬라이드의 이미지 변경
+							var activeSlide = slides[activeIndex];
+							var activeImageElement = activeSlide.querySelector('img');
+		
+							if (activeImageElement) {
+								console.log(activeIndex, realIndex)
+								if(realIndex === 1 || realIndex === 4 || realIndex === 5 || realIndex === 6) {
+									var imageUrl = activeImageElement.src;
+									var gifUrl = imageUrl.replace('.png', '.gif');
+									activeImageElement.src = gifUrl;
+								}
+							}
+						}}
+					>
+						<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
+							<p className="img"><img src="/assets/images/img_pj_sc_thumb.png" alt=""/></p>
+							<div className="hover-box">
+								<div className="box">
+									<p>SC 제일은행<br/><strong>모바일 기업뱅킹</strong></p>
+									<button type="button">GO</button>
+								</div>
 							</div>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide className="box-wrap bg-cj mask" data-aos-duration="1000">
-						<p className="img"><img src="/assets/images/img_pj_cj_thumb.png" alt=""/></p>
-						<div className="hover-box">
-							<div className="box">
-								<p>CJ대한통운<br/><strong>차세대 택배시스템</strong></p>
-								<button type="button">GO</button>
+						</SwiperSlide>
+						<SwiperSlide className="box-wrap bg-cj mask" data-aos-duration="1000">
+							<p className="img"><img src="/assets/images/img_pj_cj_thumb.png" alt=""/></p>
+							<div className="hover-box">
+								<div className="box">
+									<p>CJ대한통운<br/><strong>차세대 택배시스템</strong></p>
+									<button type="button">GO</button>
+								</div>
 							</div>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide className="box-wrap bg-sc02 mask" data-aos-duration="1000">
-						<p className="img"><img src="/assets/images/img_pj_sc02_thumb.png" alt=""/></p>
-						<div className="hover-box">
-							<div className="box">
-								<p>SC제일은행<br/><strong>고령자 편한뱅킹</strong></p>
-								<button type="button">GO</button>
+						</SwiperSlide>
+						<SwiperSlide className="box-wrap bg-sc02 mask" data-aos-duration="1000">
+							<p className="img"><img src="/assets/images/img_pj_sc02_thumb.png" alt=""/></p>
+							<div className="hover-box">
+								<div className="box">
+									<p>SC제일은행<br/><strong>고령자 편한뱅킹</strong></p>
+									<button type="button">GO</button>
+								</div>
 							</div>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide className="box-wrap bg-kb mask"  data-aos-duration="1000">
-						<p className="img"><img src="/assets/images/img_pj_kb_thumb.png" alt=""/></p>
-						<div className="hover-box">
-							<div className="box">
-								<p>KB국민은행<br/><strong>비대면 마케팅</strong></p>
-								<button type="button">GO</button>
+						</SwiperSlide>
+						<SwiperSlide className="box-wrap bg-kb mask"  data-aos-duration="1000">
+							<p className="img"><img src="/assets/images/img_pj_kb_thumb.png" alt=""/></p>
+							<div className="hover-box">
+								<div className="box">
+									<p>KB국민은행<br/><strong>비대면 마케팅</strong></p>
+									<button type="button">GO</button>
+								</div>
 							</div>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide className="box-wrap box-wrap bg-ha" data-aos-duration="1000">
-						<p className="img">
-							<img src="/assets/images/img_pj_ha_thumb.png" alt=""/>
-						</p>
-						<div className="hover-box">
-							<div className="box">
-								<p>하나카드<br/><strong>하나머니 고도화</strong></p>
-								<button type="button">GO</button>
+						</SwiperSlide>
+						<SwiperSlide className="box-wrap box-wrap bg-ha" data-aos-duration="1000">
+							<p className="img">
+								<img src="/assets/images/img_pj_ha_thumb.png" alt=""/>
+							</p>
+							<div className="hover-box">
+								<div className="box">
+									<p>하나카드<br/><strong>하나머니 고도화</strong></p>
+									<button type="button">GO</button>
+								</div>
 							</div>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide className="box-wrap bg-wo mask" data-aos-duration="1000">
-						<p className="img"><img src="/assets/images/img_pj_wo_thumb.png" alt=""/></p>
-						<div className="hover-box">
-							<div className="box">
-								<p>우리은행 사설인증<br/><strong>우리WON인증</strong></p>
-								<button type="button">GO</button>
+						</SwiperSlide>
+						<SwiperSlide className="box-wrap bg-wo mask" data-aos-duration="1000">
+							<p className="img"><img src="/assets/images/img_pj_wo_thumb.png" alt=""/></p>
+							<div className="hover-box">
+								<div className="box">
+									<p>우리은행 사설인증<br/><strong>우리WON인증</strong></p>
+									<button type="button">GO</button>
+								</div>
 							</div>
-						</div>
-					</SwiperSlide>
-					<SwiperSlide className="box-wrap bg-wo02 mask" data-aos-duration="1000">
-						<p className="img"><img src="/assets/images/img_pj_wo02_thumb.png" alt=""/></p>
-						<div className="hover-box">
-							<div className="box">
-								<p>우리은행<br/><strong>마이데이터</strong></p>
-								<button type="button">GO</button>
+						</SwiperSlide>
+						<SwiperSlide className="box-wrap bg-wo02 mask" data-aos-duration="1000">
+							<p className="img"><img src="/assets/images/img_pj_wo02_thumb.png" alt=""/></p>
+							<div className="hover-box">
+								<div className="box">
+									<p>우리은행<br/><strong>마이데이터</strong></p>
+									<button type="button">GO</button>
+								</div>
 							</div>
-						</div>
-					</SwiperSlide>
-				</Swiper>
+						</SwiperSlide>
+					</Swiper>
+				</div>
 			</div>
 				<div className="project-box">
 					<div className="tab-top">
