@@ -135,6 +135,147 @@ const Home = ({ isMain }) => {
             });
         });
     });
+
+    $(window).on('scroll', function () {
+      let scroll = $(window).scrollTop();
+
+      let articleTopIntro = $(".intro-wrap .pjt-con").offset().top;
+      let articleBottomIntro = articleTopIntro + $(".intro-wrap .pjt-con").outerHeight();
+
+      let articleTopScAge = $(".sc-aged .pjt-con").offset().top;
+      let articleBottomScAge = articleTopScAge + $(".sc-aged .pjt-con").outerHeight();
+
+      let articleTopScAge2 = $(".sc-aged .pjt-top").offset().top;
+      let articleBottomScAge2 = articleTopScAge2 + $(".sc-aged .pjt-top").outerHeight();
+
+      let articleTopScAge3 = $(".sc-aged .type-white").offset().top;
+      let articleBottomScAge3 = articleTopScAge3 + $(".sc-aged .type-white").outerHeight();
+
+      let articleTopSc = $(".sc .pjt-con").offset().top;
+      let articleBottomSc = articleTopSc + $(".sc .pjt-con").outerHeight();
+
+      let articleTopSc2 = $(".sc .pjt-top-full").offset().top;
+      let articleBottomSc2 = articleTopSc2 + $(".sc .pjt-top-full").outerHeight();
+
+      let articleTopCj = $(".cj .pjt-con").offset().top;
+      let articleBottomCj = articleTopCj + $(".cj .pjt-con").outerHeight();
+  
+      let articleTopCj2 = $(".cj .pjt-top").offset().top;
+      let articleBottomCj2 = articleTopCj2 + $(".cj .pjt-top").outerHeight();
+
+      let articleTopWoori = $(".woori-my .pjt-con.bg03").offset().top;
+      let articleBottomWoori = articleTopWoori + $(".woori-my .pjt-con.bg03").outerHeight();
+
+      let articleTopWoori2 = $(".woori-my .black-section").offset().top;
+      let articleBottomWoori2 = articleTopWoori2 + $(".woori-my .black-section").outerHeight();
+
+      let articleTop = $(".woori-open .pjt-con").offset().top;
+      let articleBottom = articleTop + $(".woori-open .pjt-con").outerHeight();
+  
+      let articleTop2 = $(".woori-open .pjt-top-full").offset().top;
+      let articleBottom2 = articleTop2 + $(".woori-open .pjt-top-full").outerHeight();
+      
+      if (scroll >= 0 && scroll < articleTopIntro) {
+        $(".btn-top").addClass('white');
+        $(".quick_btn").addClass('white')
+      }
+
+      if (scroll > articleBottomIntro) {
+        $(".btn-top").removeClass('white');
+        $(".quick_btn").removeClass('white')
+      }
+
+      if (scroll >= articleTopScAge && scroll < articleBottomScAge) {
+        $(".main-indicator-wrap").addClass("white");
+        $(".menu-toggle").addClass('white');
+        $(".btn-top").addClass('white');
+        $(".quick_btn").addClass('white')
+      }
+  
+      if (scroll >= articleTopScAge2 && scroll < articleBottomScAge2) {
+        $(".main-indicator-wrap").removeClass("white");
+        $(".menu-toggle").removeClass('white');
+        $(".btn-top").removeClass('white');
+        $(".quick_btn").removeClass('white')
+      }
+  
+      if (scroll >= articleTopScAge3 && scroll < articleBottomScAge3) {
+        $(".main-indicator-wrap").removeClass("white");
+        $(".menu-toggle").removeClass('white');
+        $(".btn-top").removeClass('white');
+        $(".quick_btn").removeClass('white')
+      }
+
+      if (scroll >= articleTopSc2 && scroll < articleBottomSc2) {
+        $(".main-indicator-wrap").addClass("white");
+        $(".menu-toggle").addClass('white');
+        $(".btn-top").addClass('white');
+        $(".quick_btn").addClass('white')
+      }
+
+      if (scroll >= articleTopSc && scroll < articleBottomSc) {
+        $(".main-indicator-wrap").addClass("white");
+        $(".menu-toggle").addClass('white');
+        $(".btn-top").addClass('white');
+        $(".quick_btn").addClass('white')
+      }
+
+      if (scroll >= articleBottomSc && scroll < articleTopSc2) {
+        $(".main-indicator-wrap").removeClass("white");
+        $(".menu-toggle").removeClass('white');
+        $(".btn-top").removeClass('white');
+        $(".quick_btn").removeClass('white')
+      }
+
+      if (scroll >= articleTopCj && scroll < articleBottomCj) {
+        $(".main-indicator-wrap").addClass("white");
+        $(".menu-toggle").addClass('white');
+        $(".btn-top").addClass('white');
+        $(".quick_btn").addClass('white')
+      }
+  
+      if (scroll >= articleTopCj2 && scroll < articleBottomCj2) {
+        $(".main-indicator-wrap").removeClass("white");
+        $(".menu-toggle").removeClass('white');
+        $(".btn-top").removeClass('white');
+        $(".quick_btn").removeClass('white')
+      }
+
+      if (scroll >= articleTopWoori && scroll < articleBottomWoori) {
+        $(".main-indicator-wrap").addClass("white");
+        $(".menu-toggle").addClass('white');
+        $(".btn-top").addClass('white');
+        $(".quick_btn").addClass('white')
+      }
+  
+      if (scroll >= articleBottomWoori) {
+        $(".main-indicator-wrap").removeClass("white");
+        $(".menu-toggle").removeClass('white');
+        $(".btn-top").removeClass('white');
+        $(".quick_btn").removeClass('white')
+      }
+  
+      if (scroll >= articleTopWoori2 && scroll < articleBottomWoori2) {
+        $(".main-indicator-wrap").removeClass("white");
+        $(".menu-toggle").removeClass('white');
+        $(".btn-top").removeClass('white');
+        $(".quick_btn").removeClass('white')
+      }
+  
+      if (scroll >= articleTop2 && scroll < articleBottom2) {
+        $(".main-indicator-wrap").addClass("white");
+        $(".menu-toggle").addClass('white');
+        $(".btn-top").addClass('white');
+        $(".quick_btn").addClass('white')
+      }
+  
+      if (scroll >= articleTop && scroll < articleBottom) {
+        $(".main-indicator-wrap").addClass("white");
+        $(".menu-toggle").addClass('white');
+        $(".btn-top").addClass('white');
+        $(".quick_btn").addClass('white')
+      }
+    });
   },[])
   return (
     <>
