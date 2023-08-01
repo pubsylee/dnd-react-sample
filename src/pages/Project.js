@@ -1,11 +1,10 @@
 import $ from 'jquery';
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 const Project = () => {
-	var activeSlideIndex = 0;
 	function rotateSlide(index) {
 		var slides = document.querySelectorAll('.project-swiper .swiper-slide');
 
@@ -101,48 +100,39 @@ const Project = () => {
   return (
     <section className="project-wrap">
 			<div className="project-box">
-				<div className="title-wrap" data-aos-duration="1000">
+				<div className="title-wrap" data-aos="fade-up" data-aos-duration="1000">
 					<p>Our Experience</p>
 					<h2>고객의 생각을 <br className="hide-pc"/><strong>디자인으로 실현</strong>합니다</h2>
 				</div>
 				<Swiper
-					slidesPerView={6.1}
-					spaceBetween={74}
+					slidesPerView={2}
+					spaceBetween={10}
 					centeredSlides={true}
-					direction='horizon'
 					roundLengths={true}
 					loop={true}
-					loopedSlides={7}
+					loopedSlides={1}
 					observer={true}
 					observeParents={true}
-					speed={1000}
-					autoplay={{
-						delay: 3500,
-						disableOnInteraction: false,
-					}}
+					speed={600}
+					autoplay={{ delay: 3000, disableOnInteraction: false }}
 					breakpoints={{
 						768: {
-						slidesPerView: 2,
-						spaceBetween: 10,
-						loop: true,
-						centeredSlides: true,
-						speed: 600,
-						autoplay: {
-						delay: 3000,
-						disableOnInteraction: false,
-					},
-				}
+							slidesPerView: 6.1,
+							spaceBetween: 74,
+							speed: 1000,
+							autoplay: {
+								delay: 3500,
+								disableOnInteraction: false
+							}
+						}
 					}}
-					modules={[Autoplay]}
-					className="project-swiper"
 					on={{
-						init: function() {
-							activeSlideIndex = this.activeIndex;
-							rotateSlide(this.activeIndex);		
+						init: function () {
+							rotateSlide(this.activeIndex);					
 						},
-						slideChange: function() {
+						slideChange: function () {
 							rotateSlide(this.activeIndex);
-
+		
 							// 이전 활성화된 슬라이드의 이미지 변경
 							var prevSlide = this.slides[this.previousIndex];
 							var prevImageElement = prevSlide.querySelector('img');
@@ -164,8 +154,10 @@ const Project = () => {
 									activeImageElement.src = gifUrl;
 								}
 							}
-						}
+						},
 					}}
+					className='project-swiper'
+					modules={[Autoplay]}
 				>
 					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
 						<p className="img"><img src="/assets/images/img_pj_sc_thumb.png" alt=""/></p>
@@ -176,7 +168,7 @@ const Project = () => {
 							</div>
 						</div>
 					</SwiperSlide>
-					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
+					<SwiperSlide className="box-wrap bg-cj mask" data-aos-duration="1000">
 						<p className="img"><img src="/assets/images/img_pj_cj_thumb.png" alt=""/></p>
 						<div className="hover-box">
 							<div className="box">
@@ -185,7 +177,7 @@ const Project = () => {
 							</div>
 						</div>
 					</SwiperSlide>
-					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
+					<SwiperSlide className="box-wrap bg-sc02 mask" data-aos-duration="1000">
 						<p className="img"><img src="/assets/images/img_pj_sc02_thumb.png" alt=""/></p>
 						<div className="hover-box">
 							<div className="box">
@@ -194,7 +186,7 @@ const Project = () => {
 							</div>
 						</div>
 					</SwiperSlide>
-					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
+					<SwiperSlide className="box-wrap bg-kb mask"  data-aos-duration="1000">
 						<p className="img"><img src="/assets/images/img_pj_kb_thumb.png" alt=""/></p>
 						<div className="hover-box">
 							<div className="box">
@@ -203,7 +195,7 @@ const Project = () => {
 							</div>
 						</div>
 					</SwiperSlide>
-					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
+					<SwiperSlide className="box-wrap box-wrap bg-ha" data-aos-duration="1000">
 						<p className="img">
 							<img src="/assets/images/img_pj_ha_thumb.png" alt=""/>
 						</p>
@@ -214,7 +206,7 @@ const Project = () => {
 							</div>
 						</div>
 					</SwiperSlide>
-					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
+					<SwiperSlide className="box-wrap bg-wo mask" data-aos-duration="1000">
 						<p className="img"><img src="/assets/images/img_pj_wo_thumb.png" alt=""/></p>
 						<div className="hover-box">
 							<div className="box">
@@ -223,7 +215,7 @@ const Project = () => {
 							</div>
 						</div>
 					</SwiperSlide>
-					<SwiperSlide className="box-wrap bg-sc mask" data-aos-duration="1000">
+					<SwiperSlide className="box-wrap bg-wo02 mask" data-aos-duration="1000">
 						<p className="img"><img src="/assets/images/img_pj_wo02_thumb.png" alt=""/></p>
 						<div className="hover-box">
 							<div className="box">

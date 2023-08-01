@@ -49,7 +49,6 @@ const Home = ({ isMain }) => {
     if(isMain === true){
       document.querySelector(".wrap").classList.add('main');
     }
-    gsap.registerPlugin(ScrollTrigger);
     gsap.utils.toArray(".gs-up").forEach(function (elem) {
         hide(elem);
         ScrollTrigger.create({
