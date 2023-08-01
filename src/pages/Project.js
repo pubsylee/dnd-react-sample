@@ -115,6 +115,7 @@ const Project = () => {
 					observeParents={true}
 					speed={600}
 					autoplay={{ delay: 3000, disableOnInteraction: false }}
+			
 					breakpoints={{
 						768: {
 							slidesPerView: 6.1,
@@ -126,35 +127,35 @@ const Project = () => {
 							}
 						}
 					}}
-					on={{
-						init: function () {
-							rotateSlide(this.activeIndex);					
-						},
-						slideChange: function () {
-							rotateSlide(this.activeIndex);
+					onInit={(swiperCore)=>{
+						const {activeIndex} = swiperCore;
+						rotateSlide(activeIndex);
+					}}
+					onSlideChange={(swiperCore)=>{
+						const {activeIndex, previousIndex, slides} = swiperCore;
+						rotateSlide(activeIndex);
+
+						// 이전 활성화된 슬라이드의 이미지 변경
+						var prevSlide = slides[previousIndex];
+						var prevImageElement = prevSlide.querySelector('img');
+	
+						if (prevImageElement) {
+							var imageUrl = prevImageElement.src;
+							var pngUrl = imageUrl.replace('.gif', '.png');
+							prevImageElement.src = pngUrl;
+						}
 		
-							// 이전 활성화된 슬라이드의 이미지 변경
-							var prevSlide = this.slides[this.previousIndex];
-							var prevImageElement = prevSlide.querySelector('img');
-		
-							if (prevImageElement) {
-								var imageUrl = prevImageElement.src;
-								var pngUrl = imageUrl.replace('.gif', '.png');
-								prevImageElement.src = pngUrl;
+						// 활성화된 슬라이드의 이미지 변경
+						var activeSlide = slides[activeIndex];
+						var activeImageElement = activeSlide.querySelector('img');
+	
+						if (activeImageElement) {
+							if(activeIndex === 8 || activeIndex === 11 || activeIndex === 12 || activeIndex === 13) {
+								var imageUrl = activeImageElement.src;
+								var gifUrl = imageUrl.replace('.png', '.gif');
+								activeImageElement.src = gifUrl;
 							}
-		
-							// 활성화된 슬라이드의 이미지 변경
-							var activeSlide = this.slides[this.activeIndex];
-							var activeImageElement = activeSlide.querySelector('img');
-		
-							if (activeImageElement) {
-								if(this.activeIndex === 8 || this.activeIndex === 11 || this.activeIndex === 12 || this.activeIndex === 13) {
-									var imageUrl = activeImageElement.src;
-									var gifUrl = imageUrl.replace('.png', '.gif');
-									activeImageElement.src = gifUrl;
-								}
-							}
-						},
+						}
 					}}
 					className='project-swiper'
 					modules={[Autoplay]}
